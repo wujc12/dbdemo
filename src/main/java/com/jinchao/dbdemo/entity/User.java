@@ -31,17 +31,21 @@ public class User {
     @NotBlank
     private String cellPhone;
 
+    @NotBlank
+    private String password;
+
     @CreationTimestamp
     private Date createTime;
 
     public User() {
     }
 
-    public User(String name, String email, String cellPhone, String classNumber) {
+    public User(String name, String email, String cellPhone, String classNumber, String password) {
         this.name = name;
         this.email = email;
         this.cellPhone = cellPhone;
         this.classNumber = classNumber;
+        this.password = password;
     }
 
     public String getId() {
@@ -82,6 +86,14 @@ public class User {
 
     public void setCellPhone(String cellPhone) {
         this.cellPhone = cellPhone;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
