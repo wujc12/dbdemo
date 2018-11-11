@@ -26,7 +26,8 @@ public class DbdemoApplicationTests {
         User user = userService.findByEmail("wujc12@live.com");
         System.out.println("User name: " + user.getName()); */
 
-        User user = new User("Jinchao", "Email@Email", "CellPhone", "ClassNumber");
+        User user = userService.findByCellPhone("18611454314");
+        user.setPassword("NewPassword");
         userService.save(user);
 
     }
